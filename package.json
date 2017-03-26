@@ -1,0 +1,18 @@
+{
+  "name": "Starter Kit",
+  "version": "1.0.0",
+  "description": "Starter kit for removing the setup of getting all dependancies ready for development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jason Jacobson",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "browser-sync": "^2.18.8",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
