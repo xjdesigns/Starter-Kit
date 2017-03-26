@@ -1,10 +1,10 @@
 'use strict';
 
-var postcss = require('gulp-postcss');
-var gulp = require('gulp');
-var autoprefixer = require('autoprefixer');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+var postcss = require('gulp-postcss'),
+    gulp = require('gulp'),
+    autoprefixer = require('autoprefixer'),
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
   var plugins = [
@@ -14,8 +14,8 @@ gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(plugins))
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('./css'))
       // stream does not work ???
       // tried all suggestions with no luck so hard refresh for now
-      // .pipe(browserSync.stream());
+      // .pipe(browserSync.stream({ match: './css/**/*.css' }));
 });
