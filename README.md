@@ -9,6 +9,6 @@ Built on Gulp, made for use with Sass.
 
 `npm install`
 
-`gulp serve` This runs watch commands on your html files, compiles sass using postcss and autoprefixer.
+`npm start` | `gulp serve` This runs watch commands on your html files, compiles sass using postcss and autoprefixer.
 
 `BUG NOTE`: Browser-sync stream is not working so sass is compiled and a hard reload at the moment.
