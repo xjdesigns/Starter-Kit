@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function () {
     // Endless stream mode
-    gulp.watch('./sass/**/*.scss', ['sass']);
+    watch('sass/**/*.scss', ['sass']);
 });
 
 // Static Server + watching scss/html files
@@ -16,6 +16,10 @@ gulp.task('serve', ['sass'], function() {
         injectChanges: true
     });
 
-    gulp.watch('./sass/**/*.scss', ['sass']).on('change', browserSync.reload);
-    gulp.watch("*.html").on('change', browserSync.reload);
+    watch('sass/**/*.scss', ['sass']).on('change', function() {
+      gulp.start('sass');
+      browserSync.reload;
+    });
+    watch("**/*.html").on('change', browserSync.reload);
+    watch("js/**/*.js").on('change', browserSync.reload);
 });
