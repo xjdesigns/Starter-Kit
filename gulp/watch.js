@@ -16,10 +16,10 @@ gulp.task('serve', ['sass'], function() {
         injectChanges: true
     });
 
-    watch('sass/**/*.scss', ['sass']).on('change', function() {
+    watch('scss/**/*.scss').on('change', function() {
       gulp.start('sass');
-      browserSync.reload;
     });
+    watch("css/**/*.css").on('change', browserSync.reload);
     watch("**/*.html").on('change', browserSync.reload);
     watch("js/**/*.js").on('change', browserSync.reload);
 });

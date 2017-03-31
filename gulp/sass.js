@@ -24,8 +24,5 @@ gulp.task('sass', function () {
       .pipe(plumber(plumberSettings))
       .pipe(sass({outputStyle: 'compressed'}))
       .pipe(postcss(plugins))
-      .pipe(gulp.dest('./css'))
-      // stream does not work ???
-      // tried all suggestions with no luck so hard refresh for now
-      // .pipe(browserSync.stream({ match: './css/**/*.css' }));
+      .pipe(gulp.dest('./css'));
 });
