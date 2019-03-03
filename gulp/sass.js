@@ -20,7 +20,7 @@ gulp.task('sass', function () {
     autoprefixer({browsers: ['> 1%', 'last 4 version']}),
   ];
 
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('./scss/**/*.scss')
       .pipe(plumber(plumberSettings))
       .pipe(sass({outputStyle: 'compressed'}))
       .pipe(postcss(plugins))

@@ -4,15 +4,175 @@
     <title>Starter Kit</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/em-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/SEGMENT.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
   </head>
   <body>
 
-    <h1>Starter Kit</h1>
+    <div class="sim-header">
+      <div class="sim-header__title">
+        <h5>Simulators</h5>
+      </div>
+    </div>
 
+    <!-- SIDENAV MENU -->
+    <div class="awesome-menu spx-ele-2" data-id="awesome-menu">
+
+      <div class="awesome-menu__cont" data-id="awesome-inner">
+
+        <div class="awesome-title">
+          <p>UI Setting</p>
+        </div>
+
+        <div class="side-opt">
+          <div class="side-opt__title">
+            Dark Mode
+          </div>
+          <div class="side-opt__action">
+            <label class="spx-tgl">
+              <input class="spx-tgl-input" type="checkbox" />
+              <div class="spx-tgl-btn" data-id="darkmodeToggle"></div>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- END SIDENAV MENU -->
+
+    <!-- START MAIN -->
+    <div class="sim-main">
+
+      <!-- SCANNER -->
+      <div class="sim-pnl" data-id="sim-scanner">
+
+        <div class="sim-pnl__main">
+          <div class="pnl-title" data-id="sim-pnl-scanner">
+            Scanner
+          </div>
+          <div class="pnl-quick" data-id="sim-quick-scanner">
+            <button
+              class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
+              data-icon="scanner"
+            ></button>
+          </div>
+        </div>
+
+        <div class="sim-pnl__ext" data-id="sim-ext-scanner">
+          <form class="spx-form">
+            <div class="flex">
+              <div class="flex__i--xs-12">
+                <label class="spx-label">Search Label</label>
+                <div class="spx-search">
+                  <input class="spx-input" type="search" value="search me" />
+                  <button class="spx-btn spx-btn--pr spx-btn--circle" data-icon="search"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <!-- END SCANNER -->
+
+      <!-- CARD READER -->
+      <div class="sim-pnl" data-id="sim-cr">
+
+        <div class="sim-pnl__main">
+          <div class="pnl-title" data-id="sim-pnl-cr">
+            Card Reader
+          </div>
+          <div class="pnl-quick" data-id="sim-quick-printer">
+            <button
+              class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
+              data-icon="credit_card"
+            ></button>
+          </div>
+        </div>
+
+        <div class="sim-pnl__ext" data-id="sim-ext-cr">
+          <form class="spx-form">
+            <div class="flex">
+              <div class="flex__i--xs-12">
+                <label class="spx-label">Input Label</label>
+                <input class="spx-input" type="text" value="Input Value" />
+              </div>
+              <div class="flex__i--xs-12">
+                <label class="spx-label">Textarea Label</label>
+                <textarea class="spx-textarea" cols="30" rows="10"></textarea>
+              </div>
+              <div class="flex__i--xs-12">
+                <label class="spx-label">Search Label</label>
+                <div class="spx-search">
+                  <input class="spx-input" type="search" value="search me" />
+                  <button class="spx-btn spx-btn--pr spx-btn--circle" data-icon="search"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <!-- END CARD READER -->
+
+      <!-- PRINTER -->
+      <div class="sim-pnl" data-id="sim-printer">
+
+        <div class="sim-pnl__main">
+          <div class="pnl-title" data-id="sim-pnl-printer">
+            Printer
+          </div>
+          <div class="pnl-quick" data-id="sim-quick-printer">
+            <button
+              class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
+              data-icon="print"
+            ></button>
+          </div>
+        </div>
+
+        <div class="sim-pnl__ext" data-id="sim-ext-printer">
+          <div class="spx-btn-group">
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- END PRINTER -->
+
+      <!-- CASH DRAWER -->
+      <div class="sim-pnl" data-id="sim-cash-drawer">
+
+        <div class="sim-pnl__main">
+          <div class="pnl-title" data-id="sim-pnl-cash-drawer">
+            Cash Drawer
+          </div>
+          <div class="pnl-quick" data-id="sim-quick-cash-drawer">
+            <button
+              class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
+              data-icon="money"
+            ></button>
+          </div>
+        </div>
+
+        <div class="sim-pnl__ext" data-id="sim-ext-cash-drawer">
+          <div class="spx-btn-group">
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+            <button class="spx-btn spx-btn--pr spx-btn--sm">I am button</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- END CASH DRAWER -->
+
+    </div>
+    <!-- END MAIN -->
+
+    <script src="./index.js"></script>
   </body>
 </html>

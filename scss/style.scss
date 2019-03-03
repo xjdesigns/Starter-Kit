@@ -1,9 +1,5 @@
-body {
-  background: red !important;
-  min-height: 100vh;
-  height: 100%;
-}
-.jason {
-  display: flex;
-  align-items: center;
-}
+@import "var";
+@import "base";
+
+// SIMULATOR
+@import "simulator";

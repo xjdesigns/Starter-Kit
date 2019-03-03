@@ -1,0 +1,139 @@
+body {
+  background: var(--bg);
+}
+
+.spx-form {
+  --label: var(--invert);
+}
+
+body[data-id="darkmode"] {
+  --bg: var(--bg-dark);
+  --txt: var(--bg-light);
+  --invert: var(--bg-light);
+  --spx-invert: rgb(208, 255, 5);
+
+  .spx-btn--pr {
+    --pr: var(--spx-invert);
+    color: black;
+
+    &:hover {
+      color: var(--pr);
+    }
+  }
+
+  .spx-tgl {
+    --bg-active: var(--spx-invert);
+    --thumb: var(--bg);
+  }
+}
+
+.sim-header {
+  max-height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: var(--txt);
+
+  &__title {
+    flex: 1;
+  }
+}
+
+.awesome-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: var(--invert);
+  border-radius: 0px 0px 0px 36px;
+  transform: translate(calc(100% - 36px), calc(-100% + 36px));
+  transition: transform .3s ease, border-radius .3s ease, background .2s ease;
+
+  &.is-open {
+    background: var(--bg);
+    border-radius: 0px;
+    transform: translate(0%, 0%);
+  }
+
+  &__cont {
+    width: 70vw;
+    margin: 24px auto;
+  }
+}
+
+.awesome-title {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  color: var(--txt);
+  border-bottom: 2px solid var(--invert);
+}
+
+.side-opt {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+    color: var(--txt);
+  }
+}
+
+.sim-main {
+  min-height: calc(100vh - 54px);
+  max-height: calc(100vh - 54px);
+  overflow: auto;
+}
+
+.sim-pnl {
+  padding: 12px;
+  border-top: 1px solid var(--invert);
+  border-bottom: 1px solid var(--invert);
+
+  &:nth-child(n+2) {
+    margin-top: -1px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+
+  &__ext {
+    max-height: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+    transition: max-height .3s ease,  margin-top .3s ease;
+
+    &.is-open {
+      max-height: 600px;
+      margin-top: 12px;
+    }
+  }
+
+  .pnl-title {
+    flex: 1;
+    color: var(--txt);
+    cursor: pointer;
+  }
+}
+
+// btn group need to add to segment
+.spx-btn-group {
+  display: flex;
+
+  .spx-btn {
+    flex: 1;
+    margin-right: 0;
+    border-radius: 0px;
+
+    &:first-child {
+      border-radius: 24px 0 0 24px;
+    }
+
+    &:last-child {
+      border-radius: 0 24px 24px 0;
+    }
+  }
+}
