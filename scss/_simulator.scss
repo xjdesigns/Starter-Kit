@@ -1,12 +1,29 @@
-body {
+html, body {
   background: var(--bg);
+  --spx-invert: var(--brand-primary);
+}
+
+html {
+  &[data-font="sm"] {
+    font-size: 70%;
+  }
+  &[data-font="lg"] {
+    font-size: 120%;
+  }
 }
 
 .spx-form {
   --label: var(--invert);
 }
 
-body[data-id="darkmode"] {
+.spx-radio {
+  --label: var(--invert);
+  --radio-hover: var(--grey-d1);
+  --radio-active: var(--spx-invert);
+  --radio-inactive: var(--invert);
+}
+
+body[data-mode="darkmode"] {
   --bg: var(--bg-dark);
   --txt: var(--bg-light);
   --invert: var(--bg-light);
@@ -73,10 +90,23 @@ body[data-id="darkmode"] {
 .side-opt {
   display: flex;
   align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--invert);
+
+  &--top {
+    align-items: flex-start;
+  }
 
   &__title {
     flex: 1;
     color: var(--txt);
+  }
+
+  &__action {
+    .spx-radio {
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -84,6 +114,17 @@ body[data-id="darkmode"] {
   min-height: calc(100vh - 54px);
   max-height: calc(100vh - 54px);
   overflow: auto;
+}
+
+.sim-last-action {
+  padding: 12px;
+  font-size: .75rem;
+  color: var(--spx-invert);
+  border-top: 1px solid var(--invert);
+
+  &__type {
+    font-weight: bold;
+  }
 }
 
 .sim-pnl {

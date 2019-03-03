@@ -18,7 +18,7 @@
     </div>
 
     <!-- SIDENAV MENU -->
-    <div class="awesome-menu spx-ele-2" data-id="awesome-menu">
+    <div class="awesome-menu is-open spx-ele-2" data-id="awesome-menu">
 
       <div class="awesome-menu__cont" data-id="awesome-inner">
 
@@ -26,6 +26,7 @@
           <p>UI Setting</p>
         </div>
 
+        <!-- DARKMODE -->
         <div class="side-opt">
           <div class="side-opt__title">
             Dark Mode
@@ -38,6 +39,36 @@
           </div>
         </div>
 
+        <!-- FONT SCALING -->
+        <div class="side-opt side-opt--top">
+          <div class="side-opt__title">
+            Font Size
+          </div>
+          <div class="side-opt__action" data-id="fontSizeValue">
+            <div>
+              <label class="spx-radio">
+                <input type="radio" name="font" value="sm" />
+                <div class="spx-radio__dot"></div>
+                sm
+              </label>
+            </div>
+            <div>
+              <label class="spx-radio">
+                <input type="radio" name="font" value="md" checked />
+                <div class="spx-radio__dot"></div>
+                md
+              </label>
+            </div>
+            <div>
+              <label class="spx-radio">
+                <input type="radio" name="font" value="lg" />
+                <div class="spx-radio__dot"></div>
+                lg
+              </label>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -45,6 +76,13 @@
 
     <!-- START MAIN -->
     <div class="sim-main">
+
+      <!-- LAST ACTION -->
+      <div class="sim-last-action">
+        <span>Last action taken:</span>
+        <span class="sim-last-action__type" data-id="last-action"></span>
+      </div>
+      <!-- END LAST ACTION -->
 
       <!-- SCANNER -->
       <div class="sim-pnl" data-id="sim-scanner">
@@ -57,6 +95,7 @@
             <button
               class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
               data-icon="scanner"
+              data-id="sim-quick-scan"
             ></button>
           </div>
         </div>
@@ -89,6 +128,7 @@
             <button
               class="spx-btn spx-btn--pr spx-btn--circle spx-btn--sm"
               data-icon="credit_card"
+              data-id="sim-quick-cr"
             ></button>
           </div>
         </div>
