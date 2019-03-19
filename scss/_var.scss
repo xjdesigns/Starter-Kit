@@ -57,7 +57,8 @@ $liga-font-family: 'Material Icons';
 // CSS VARIABLES
 :root {
   --bg-light: #{$grey-l1};
-  --bg-dark: #{$grey-d1};
+  // --bg-dark: #{$grey-d1};
+  --bg-dark: #1c2633;
   --bg: var(--bg-light);
   --txt: var(--bg-dark);
   --invert: var(--bg-dark);

@@ -66,7 +66,7 @@ body[data-mode="darkmode"] {
   background: var(--invert);
   border-radius: 0px 0px 0px 36px;
   transform: translate(calc(100% - 36px), calc(-100% + 36px));
-  transition: transform .3s ease, border-radius .3s ease, background .2s ease;
+  transition: transform .8s ease, border-radius 1s ease, background .5s ease;
 
   &.is-open {
     background: var(--bg);
@@ -176,5 +176,36 @@ body[data-mode="darkmode"] {
     &:last-child {
       border-radius: 0 24px 24px 0;
     }
+  }
+}
+
+$heart-size: 20px;
+.heart-me {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: $heart-size;
+  height: $heart-size;
+  background: red;
+  transform: rotate(45deg);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $heart-size;
+    height: $heart-size;
+    background: red;
+    border-radius: 50%;
+  }
+
+  &::before {
+    top: 0px;
+    left: calc(-#{$heart-size} / 2);
+  }
+
+  &::after {
+    top: calc(-#{$heart-size} / 2);
+    left: 0px;
   }
 }
